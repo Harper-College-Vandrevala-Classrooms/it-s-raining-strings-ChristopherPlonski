@@ -14,7 +14,7 @@ void StringSorter::add_string_to_string_vector(string stringToAdd) {
 
 void StringSorter::sort_strings() {
 	vector<string>::iterator first = stringVector.begin();
-	vector<string>::iterator last = stringVector.begin();
+	vector<string>::iterator last = stringVector.end();
 
 	sort(first, last);
 }

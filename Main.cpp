@@ -23,6 +23,7 @@ int main() {
 	cout << "Welcome to the Business Name Sorter." << endl;
 
 	bool continuePromptingNames = true;
+	StringSorter stringSorter = StringSorter();
 
 	while (continuePromptingNames) {
 		string userBusinessNamePrompt;
@@ -31,8 +32,6 @@ int main() {
 		cin >> userBusinessNamePrompt;
 		cout << endl;
 
-		StringSorter stringSorter = StringSorter();
-		
 		stringSorter.add_new_string(userBusinessNamePrompt);
 		stringSorter.cout_sorted_strings();
 
