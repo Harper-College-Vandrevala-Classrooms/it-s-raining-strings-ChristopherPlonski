@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <iterator> 
+#include <string>
 #include "StringSorter.hpp"
 
 using namespace std;
@@ -29,8 +30,8 @@ int main() {
 		string userBusinessNamePrompt;
 
 		cout << "Enter the name of the business: ";
-		cin >> userBusinessNamePrompt;
-		cout << endl;
+		getline(cin, userBusinessNamePrompt);
+		//cin.ignore();
 
 		stringSorter.add_new_string(userBusinessNamePrompt);
 		stringSorter.cout_sorted_strings();
@@ -38,13 +39,15 @@ int main() {
 		string userContinuePrompt;
 
 		cout << "Do you want to add another business? ";
-		cin >> userContinuePrompt;
-		cout << endl;
+		getline(cin, userContinuePrompt);
+		//cin.ignore();
 
 		if (!is_prompt_yes(userContinuePrompt)) {
 			continuePromptingNames = false;
 		}
 	}
+
+	cout << "Goodbye!" << endl;
 
 	return 0;
 }
